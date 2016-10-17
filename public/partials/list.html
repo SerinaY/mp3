@@ -1,0 +1,49 @@
+<header>IMDB 250</header>
+<ul class="menu align-center simple">
+    <li><a class="route" href="#/">Search</a> </li>
+    <li><a class="route" href="#gallery">Gallery</a> </li>
+</ul>
+<div class="pad"></div>
+
+<form class="filter-box medium-4 medium-offset-4 small-8 small-offset-2 end">
+    <div>
+        <input id="query" class="small-12 columns" ng-model="input " placeholder="Find a movie...">
+
+    </div>
+</form>
+<div class="selection">
+    <label id="filter" class="small-2 small-offset-2 columns">
+        <select id="filters">
+            <option value="Rank">Rank</option>
+            <option value="Rating">Rating</option>
+            <option value="Release">Release</option>
+            <option value="Title">Title</option>
+        </select>
+    </label>
+    <form action="" id="order" class="small-6 columns end">
+        <fieldset>
+            <input type="radio" name="pockets" checked="checked" value="down">  <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            <input type="radio" name="pockets" value="up">  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </fieldset>
+    </form>
+</div>
+<div class="list small-8 small-offset-2 columns end">
+    <div ng-repeat="movie in movies">
+        <a href="#details/{{movie.rank}}">
+        <div class="list_item media-object">
+            <div class="media-object-section">
+                <div class="thumbnail">
+                   <img src="data/images/{{movie.imdbID}}.jpg" alt="data/images/tt0031381.jpg" width="60" />
+
+                </div>
+            </div>
+            <div class="media-object-section">
+                <h4>{{movie.title}} ({{movie.released|date:"short"}})</h4>
+                <div >{{movie.rank}}</div>
+                <div >{{movie.imdbRating}}</div>
+            </div>
+        </div>
+        </a>
+    </div>
+</div>
+

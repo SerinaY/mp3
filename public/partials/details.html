@@ -1,0 +1,64 @@
+<header>IMDB 250</header>
+<ul class="menu align-center simple">
+    <li><a class="route" href="#/">Search</a> </li>
+    <li><a class="route" href="#gallery">Gallery</a> </li>
+</ul>
+
+
+<div class="list small-8 small-offset-2 columns end">
+    <div ng-repeat="movie in movies">
+        <a class="route" href="#details/{{ (movie.rank == 1) ? movie.rank+249 : movie.rank-1 }}"><i class="fa fa-arrow-left" aria-hidden="true">prev</i></a>
+        <a class="route" href="#details/{{ (movie.rank == 250) ? movie.rank-249 : movie.rank+1 }}"><i class="fa fa-arrow-right" aria-hidden="true">next</i></a>
+        <div class="ranking">
+            <img src="data/images/star.png" width="30px"/>
+            <div>{{movie.rank}}</div>
+        </div>
+        <div class="media-object">
+            <h3 style="padding: 15px">{{movie.title}}</h3>
+            <div class="media-object-section" style="padding: 20px">
+                <div class="thumbnail">
+                    <img src="data/images/{{movie.imdbID}}.jpg" width="250px"/>
+                </div>
+            </div>
+            <div class="media-object-section" style="padding: 20px">
+                <p >
+                <div class="list-inline">
+                    <h6 style="display: inline-block; color: #222671;">Director: </h6>
+                    <span ng-repeat="n in movie['director']">{{n}}{{$last ? '' : ($index==movie['genre'].length-2) ? ' / ' : '/'}}</span>
+                </div>
+                <div class="list-inline">
+                    <h6 style="display: inline-block; color: #222671;">Actors: </h6>
+                    <span ng-repeat="n in movie['actors']">{{n}}{{$last ? '' : ($index==movie['genre'].length-2) ? ' / ' : '/'}}</span>
+                </div>
+                <div class="list-inline">
+                    <h6 style="display: inline-block; color: #222671;">Language: </h6>
+                    <span ng-repeat="n in movie['language']">{{n}}{{$last ? '' : ($index==movie['genre'].length-2) ? ' / ' : '/'}}</span>
+                </div>
+                <div class="list-inline">
+                    <h6 style="display: inline-block; color: #222671;">Country: </h6>
+                    <span ng-repeat="n in movie['country']">{{n}}{{$last ? '' : ($index==movie['genre'].length-2) ? ' / ' : '/'}}</span>
+                </div>
+                <div class="list-inline">
+                    <h6 style="display: inline-block; color: #222671;">Genre: </h6>
+                    <span ng-repeat="n in movie['genre']">&nbsp;{{n}} {{$last ? '' : ($index==movie['genre'].length-2) ? '/' : '/'}}</span>
+                </div>
+
+                <div class="list-inline">
+                    <h6 style="display: inline-block; color: #222671;">Award: </h6>
+                    <span>{{movie.awards}}</span>
+                </div>
+                <div class="list-inline">
+                    <h6 style="display: inline-block; color: #222671;">IMDb link: </h6>
+                    <a class="route" href="http://www.imdb.com/title/{{movie.imdbID}}/" style="text-decoration: none">{{movie.imdbID}}</a>
+                </div>
+                <div class="list-inline">
+                    <h6 style="display: inline-block; color: #222671;">Plot: </h6>
+                    <span>{{movie.plot}}</span>
+                </div>
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

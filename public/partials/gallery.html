@@ -1,0 +1,24 @@
+<header>IMDB 250</header>
+<ul class="menu align-center simple">
+    <li><a class="route" href="#/">Search</a></li>
+    <li><a class="route" href="#gallery">Gallery</a></li>
+</ul>
+
+<div id="g-filter" class="button-group">
+    <button class="button is-checked" data-filter="*">show all</button>
+    <button class="button" data-filter="Crime">Crime</button>
+    <button class="button" data-filter="Drama">Drama</button>
+    <button class="button" data-filter="Action">Action</button>
+    <button class="button" data-filter="Adventure">Adventure</button>
+    <button class="button" data-filter="Fantasy">Fantasy</button>
+    <button class="button" data-filter="Thriller">Triller</button>
+</div>
+<div class="list small-10 small-offset-1 columns end" style="text-align: center">
+    <div id="gallery" ng-repeat="movie in movies" style="display: inline-block">
+        <div class="media">
+            <a class="route" href="#details/{{movie.rank}}">
+                <img src="data/images/{{movie.imdbID}}.jpg" width="120px"/>
+            </a>
+        </div>
+    </div>
+</div>

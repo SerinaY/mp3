@@ -1,1 +1,124 @@
-// Add any custom Sass & CSS here
+%title-text {
+  font-family: $title-font;
+  font-size:$title-size;
+}
+body{
+  background-color: #fbffe9;
+}
+header{
+  z-index: -1;
+  @extend %title-text;
+  padding: 100px;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  height: 300px ;
+  text-align: center;
+}
+.filter-box{
+  height:80px;
+  input{
+    height: 30px;
+    border-radius: 5px;
+    width:100%;
+  }
+  label{
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    vertical-align: baseline;
+  }
+  #query{
+     height: 40px;
+   }
+}
+.menu{
+  text-align: center;
+  height: 50px;
+  padding: 10px;
+  color: #0c4d78;
+  li{
+    background-color: honeydew;
+    color: #0a0a0a;
+    font-family: "Droid Serif", serif;
+  }
+}
+
+#g-filter{
+  text-align: center;
+  button{
+    background-color: #2f6578;
+    border-radius: 5%;
+  }
+  .is-checked{
+    background-color: #0c4d78;
+  }
+}
+
+.selection{
+  height:50px;
+
+  padding: 15px;
+
+  #filter{
+    height: 80px;
+    text-align: center;
+  }
+
+  #order{
+    position: relative;
+    top: 10px;
+  }
+}
+.list{
+  position: relative;
+  .list_item{
+    &:hover {
+      background-color: #a8c6e4;
+      zoom:1.4;
+      transition: background-color 0.3s, zoom 5s;
+    }
+  }
+  .ranking{
+    width: 100px;
+    padding: 4px;
+    height: 60px;
+    position: absolute;
+    right:50px;
+    background-color: #dff0d8;
+    border-radius: 5%;
+    text-align: center;
+    img{
+      display: inline-block;
+      bottom: 8px;
+      position: relative;
+    }
+    div{
+      display: inline-block;
+      font-family: $title-font;
+      font-size:40px;
+      position: relative;
+
+    }
+  }
+  .media-object{
+    color:black;
+    background-color: white;
+    padding:40px;
+    border-radius: 10px;
+    h3{
+      font-family: $text;
+      font-weight: bold;
+    }
+    .list-inline{
+      h6{
+        text-decoration: underline;
+      }
+    }
+    font-family: $text;
+  }
+
+
+}
