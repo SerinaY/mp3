@@ -31,6 +31,15 @@ imdb.controller('galleryCtrl', ['$scope', '$http', function($scope, $http) {
         query();
     });
 
+    $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+            event.stopPropagation();
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $( this ).addClass('is-checked');
+        });
+    });
+
 
 
 }]);
@@ -57,49 +66,73 @@ imdb.controller('detailsCtrl', ['$scope', '$routeParams','$http', function($scop
 
 
 imdb.controller('myController', ['$scope', '$http', function($scope, $http) {
-    $scope.query = "G";
     $scope.selection;
-    $scope.comp=choose("Rank");
+    $scope.comp=rank;
     $scope.order = true;//true if descending
     $scope.movies;
-    var f = getQuery($scope.comp,$scope.order);
+    var f = getQuery();
 
     $( "#query" ).keydown(function() {
         event.stopPropagation();
-        getQuery($scope.comp, $scope.order);
+        getQuery();
     });
 
     $('select').change(function() {
-        getQuery(choose(this.value), $scope.order);
+        var s=this.value;
+        console.log(this.value);
+        if(s.localeCompare("Release")==0) {
+            console.log("in release");
+            $scope.comp = release;
+        }
+        else if(s.localeCompare("Title")==0) {
+            console.log("in title");
+            $scope.comp = title;
+        }
+        else{
+            $scope.comp=rank;
+        }
+        getQuery();
     });
 
     $('#order input').on('click', function() {
         if(this.value.localeCompare('down')==0){
-            if($scope.order!=true){
-                $scope.order=true;
-                getQuery($scope.omp, $scope.order);
-            }
+            $scope.order=true;
+            getQuery();
         }
         else{
-            if($scope.order=true){
-                $scope.order=false;
-                getQuery($scope.comp, $scope.order);
-            }
+            $scope.order=false;
+            getQuery();
         }
     });
-    function getQuery(cp, order){
+    function getQuery(){
+        console.log($scope.comp);
+        console.log($scope.order);
         $http({
             method : "GET",
             url : "data/imdb250.json"
         }).then(function mySucces(response) {
-            if(order==true)
-                $scope.movies=response.data.filter(select).sort(cp);
+            if($scope.order==true)
+                $scope.movies=response.data.filter(select).sort($scope.comp);
             else
-                $scope.movies=response.data.filter(select).sort(cp).reverse();
+                $scope.movies=response.data.filter(select).sort($scope.comp).reverse();
         }, function myError(response) {
             $scope.movies = response;
         });
     }
+    function title(a, b) {
+        return a.title.toString().localeCompare(b.title.toString());
+    }
+
+
+    function release(a, b) {
+        sa=a.released.toString();
+        sb=b.released.toString();
+        return sb.substring(7,11).localeCompare(sa.substring(7,11));
+    }
+    function rank(a, b) {
+        return a.rank-b.rank;
+    }
+
 
 
 

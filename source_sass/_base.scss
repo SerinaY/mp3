@@ -3,25 +3,33 @@
   font-size:$title-size;
 }
 body{
-  background-color: #fbffe9;
+  background-color: #fdf9f1;
 }
 header{
   z-index: -1;
   @extend %title-text;
-  padding: 100px;
+  padding: 64px;
   left: 0;
   right: 0;
   margin-right: auto;
   margin-left: auto;
-  height: 300px ;
+  height: 200px ;
   text-align: center;
 }
-.filter-box{
+.filterbox{
   height:80px;
   input{
-    height: 30px;
-    border-radius: 5px;
+
+    height: 50px;
     width:100%;
+      padding: 10px;
+      border: solid 3px #c9c9c9;
+      transition: border 0.3s;
+    font-family: $text;
+
+  }
+  input .focus{
+    border: solid 5px #969696;
   }
   label{
     display: inline-block;
@@ -31,7 +39,8 @@ header{
     vertical-align: baseline;
   }
   #query{
-     height: 40px;
+
+
    }
 }
 .menu{
@@ -39,8 +48,7 @@ header{
   height: 50px;
   padding: 10px;
   color: #0c4d78;
-  li{
-    background-color: honeydew;
+  a{
     color: #0a0a0a;
     font-family: "Droid Serif", serif;
   }
@@ -73,21 +81,22 @@ header{
   }
 }
 .list{
+  font-family: $text;
   position: relative;
   .list_item{
     &:hover {
       background-color: #a8c6e4;
-      zoom:1.4;
+      zoom:1.1;
       transition: background-color 0.3s, zoom 5s;
     }
   }
   .ranking{
-    width: 100px;
+    width: 110px;
     padding: 4px;
     height: 60px;
     position: absolute;
     right:50px;
-    background-color: #dff0d8;
+    background-color: #f5cf87;
     border-radius: 5%;
     text-align: center;
     img{
@@ -108,7 +117,13 @@ header{
     background-color: white;
     padding:40px;
     border-radius: 10px;
-    h3{
+    .media-object-section{
+      h4 {
+        font-family: $text;
+        font-weight: bold;
+      }
+    }
+    h3 h4{
       font-family: $text;
       font-weight: bold;
     }
@@ -121,4 +136,10 @@ header{
   }
 
 
+}
+.route{
+  color: #222671;
+  div{
+    display: inline-block;
+  }
 }

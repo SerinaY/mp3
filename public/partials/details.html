@@ -1,20 +1,21 @@
 <header>IMDB 250</header>
-<ul class="menu align-center simple">
-    <li><a class="route" href="#/">Search</a> </li>
-    <li><a class="route" href="#gallery">Gallery</a> </li>
+<ul class="menu simple align-center">
+    <li><a class="route" href="#/">Search&nbsp;<i class="fa fa-search" aria-hidden="true"></i></a></li>
+    <li><a class="route" href="#gallery">Gallery&nbsp;<i class="fa fa-camera-retro" aria-hidden="true"></i></a></li>
 </ul>
 
 
 <div class="list small-8 small-offset-2 columns end">
     <div ng-repeat="movie in movies">
-        <a class="route" href="#details/{{ (movie.rank == 1) ? movie.rank+249 : movie.rank-1 }}"><i class="fa fa-arrow-left" aria-hidden="true">prev</i></a>
-        <a class="route" href="#details/{{ (movie.rank == 250) ? movie.rank-249 : movie.rank+1 }}"><i class="fa fa-arrow-right" aria-hidden="true">next</i></a>
+        <a class="route" href="#details/{{ (movie.rank == 1) ? movie.rank+249 : movie.rank-1 }}"style="display: inline-block"><i class="fa fa-caret-square-o-left" aria-hidden="true"></i></a>
+        <div style="display: inline-block">{{movie.rank}} / 250</div>
+        <a class="route" href="#details/{{ (movie.rank == 250) ? movie.rank-249 : movie.rank+1 }}"style="display: inline-block"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>
         <div class="ranking">
             <img src="data/images/star.png" width="30px"/>
             <div>{{movie.rank}}</div>
         </div>
         <div class="media-object">
-            <h3 style="padding: 15px">{{movie.title}}</h3>
+            <h3 style="padding: 15px">{{movie.title}} ({{movie.released.substr(7,10)}})</h3>
             <div class="media-object-section" style="padding: 20px">
                 <div class="thumbnail">
                     <img src="data/images/{{movie.imdbID}}.jpg" width="250px"/>

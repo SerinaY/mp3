@@ -1,13 +1,13 @@
 <header>IMDB 250</header>
-<ul class="menu align-center simple">
-    <li><a class="route" href="#/">Search</a> </li>
-    <li><a class="route" href="#gallery">Gallery</a> </li>
+<ul class="menu simple align-center">
+    <li><a class="route" href="#/">Search&nbsp;<i class="fa fa-search" aria-hidden="true"></i></a></li>
+    <li><a class="route" href="#gallery">Gallery&nbsp;<i class="fa fa-camera-retro" aria-hidden="true"></i></a></li>
 </ul>
 <div class="pad"></div>
 
-<form class="filter-box medium-4 medium-offset-4 small-8 small-offset-2 end">
+<form class="filterbox medium-4 medium-offset-4 small-8 small-offset-2 end">
     <div>
-        <input id="query" class="small-12 columns" ng-model="input " placeholder="Find a movie...">
+        <input id="query" class="small-12 columns" ng-model="input " placeholder="Find a movie by title, actors...">
 
     </div>
 </form>
@@ -15,7 +15,6 @@
     <label id="filter" class="small-2 small-offset-2 columns">
         <select id="filters">
             <option value="Rank">Rank</option>
-            <option value="Rating">Rating</option>
             <option value="Release">Release</option>
             <option value="Title">Title</option>
         </select>
@@ -33,14 +32,13 @@
         <div class="list_item media-object">
             <div class="media-object-section">
                 <div class="thumbnail">
-                   <img src="data/images/{{movie.imdbID}}.jpg" alt="data/images/tt0031381.jpg" width="60" />
-
+                   <img src="data/images/{{movie.imdbID}}.jpg" alt="data/images/tt0031381.jpg" width="80px" />
                 </div>
             </div>
             <div class="media-object-section">
-                <h4>{{movie.title}} ({{movie.released|date:"short"}})</h4>
-                <div >{{movie.rank}}</div>
-                <div >{{movie.imdbRating}}</div>
+                <h4>{{movie.title}} ({{movie.released.substr(7,10)}})</h4>
+                <div >{{movie.rank}} / 250</div>
+                <div >Rating: {{movie.imdbRating}}</div>
             </div>
         </div>
         </a>
