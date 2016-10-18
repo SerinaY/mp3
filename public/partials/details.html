@@ -12,7 +12,7 @@
         <a class="route" href="#details/{{ (movie.rank == 250) ? movie.rank-249 : movie.rank+1 }}"style="display: inline-block"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>
         <div class="ranking">
             <img src="data/images/star.png" width="30px"/>
-            <div>{{movie.rank}}</div>
+            <div>{{movie.imdbRating}}</div>
         </div>
         <div class="media-object">
             <h3 style="padding: 15px">{{movie.title}} ({{movie.released.substr(7,10)}})</h3>
