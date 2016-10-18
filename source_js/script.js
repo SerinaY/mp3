@@ -14,11 +14,11 @@ function select(obj){
         obj.released.toString().includes(target))
         return true;
     for(var i in obj.director){
-        if(i.toString().includes(target))
+        if(obj.director[i].toUpperCase().includes(target))
             return true;
     }
     for(var i in obj.actors){
-        if(i.toString().includes(target))
+        if(obj.actors[i].toUpperCase().includes(target))
             return true;
     }
     return false;

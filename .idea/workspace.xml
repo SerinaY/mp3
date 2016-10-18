@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2b7530c6-900a-49bd-9a42-1a098fd65c6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/details.html" afterPath="$PROJECT_DIR$/public/partials/details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/gallery.html" afterPath="$PROJECT_DIR$/public/partials/gallery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/list.html" afterPath="$PROJECT_DIR$/public/partials/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source_js/controllers.js" afterPath="$PROJECT_DIR$/source_js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source_js/script.js" afterPath="$PROJECT_DIR$/source_js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source_sass/_base.scss" afterPath="$PROJECT_DIR$/source_sass/_base.scss" />
     </list>
     <ignored path="mp3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/partials/list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
@@ -96,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source_js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
-              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state relative-caret-position="1215">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,8 +105,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source_js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -177,9 +173,9 @@
         <option value="$PROJECT_DIR$/public/partials/gallery.html" />
         <option value="$PROJECT_DIR$/public/partials/details.html" />
         <option value="$PROJECT_DIR$/source_sass/_base.scss" />
+        <option value="$PROJECT_DIR$/public/partials/list.html" />
         <option value="$PROJECT_DIR$/source_js/script.js" />
         <option value="$PROJECT_DIR$/source_js/controllers.js" />
-        <option value="$PROJECT_DIR$/public/partials/list.html" />
       </list>
     </option>
   </component>
@@ -317,12 +313,12 @@
       <workItem from="1476494284778" duration="88000" />
       <workItem from="1476494404339" duration="5458000" />
       <workItem from="1476552669147" duration="50193000" />
-      <workItem from="1476720649404" duration="7654000" />
+      <workItem from="1476720649404" duration="8192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63393000" />
+    <option name="totallyTimeSpent" value="63931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -678,6 +674,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/partials/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#105#111#0" expanded="true" />
+            <element signature="e#216#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source_sass/_base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/partials/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding>
+            <element signature="e#105#111#0" expanded="true" />
+            <element signature="e#216#222#0" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/partials/details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -707,49 +735,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source_js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source_js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state relative-caret-position="1215">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source_sass/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding>
-            <element signature="e#105#111#0" expanded="true" />
-            <element signature="e#216#222#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#105#111#0" expanded="true" />
-            <element signature="e#216#222#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

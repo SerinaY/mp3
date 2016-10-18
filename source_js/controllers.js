@@ -79,13 +79,10 @@ imdb.controller('myController', ['$scope', '$http', function($scope, $http) {
 
     $('select').change(function() {
         var s=this.value;
-        console.log(this.value);
         if(s.localeCompare("Release")==0) {
-            console.log("in release");
             $scope.comp = release;
         }
         else if(s.localeCompare("Title")==0) {
-            console.log("in title");
             $scope.comp = title;
         }
         else{
@@ -105,8 +102,6 @@ imdb.controller('myController', ['$scope', '$http', function($scope, $http) {
         }
     });
     function getQuery(){
-        console.log($scope.comp);
-        console.log($scope.order);
         $http({
             method : "GET",
             url : "data/imdb250.json"
